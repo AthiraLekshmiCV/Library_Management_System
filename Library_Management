@@ -44,19 +44,19 @@ create table return
 	book_id Varchar(20) references book(book_id)
 );
 
-select * from member;
-select * from return;
-select * from issue;
-select * from book;
-select * from category;
-select * from fine_calc;
+--select * from member;
+--select * from return;
+--select * from issue;
+--select * from book;
+--select * from category;
+--select * from fine_calc;
 
-drop table category;
-drop table book;
-drop table return;
-drop table issue;
-drop table member;
-delete from member ;
+--drop table category;
+--drop table book;
+--drop table return;
+--drop table issue;
+--drop table member;
+--delete from member ;
 ------------------------insert---------------------------
 
 
@@ -66,7 +66,7 @@ insert into category values('C3','Prose',3,3);
 insert into category values('C4','Poetry',3,4);
 insert into category values('C5','Drama',5,5);
 
-SELECT * FROM category;
+--SELECT * FROM category;
 
 
 
@@ -86,9 +86,9 @@ insert into book values('B13','Charlie and the Chocolate Factory ','Roald Dahl',
 insert into book values('B14','Alice in Wonderland','Lewis Carroll','C3','E1',2);
 insert into book values('B15','Harry Potter and the Half Blood Prince','J K Rowling','C2','E6',1 );
 
-select * from book;
+--select * from book;
 
-delete from member;
+--delete from member;
 insert into issue values('I1','05/01/2014','1','05/05/2014','B1');
 insert into issue values('I2','12/12/2014','2','12/21/2014','B2');
 insert into issue values('I3','11/02/2014','2','12/21/2014','B3');
@@ -122,7 +122,7 @@ insert into member (mem_name,address,phno,join_date) values('Fawad Khan','Capita
 insert into member (mem_name,address,phno,join_date) values('Lincy Rappai','Rajapalayam,Vizag,Andhra Pradesh',3281650,'11/18/1994');
 insert into member (mem_name,address,phno,join_date) values('Suraj Ravishankar','Highway Road,Chennai,Tamil Nadu',3490216,'01/14/1995');
 
-select * from member;
+--select * from member;
 
 
 
@@ -199,8 +199,9 @@ select * from member;
 
 create view view1 as select category_id,count(category_id) from book group by category_id;
 
-select * from view1;
+
 grant select on view1 to examuser11;
+select * from view1;
 
 --------------JOIN QUERY---------------
 
